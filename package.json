@@ -1,0 +1,45 @@
+{
+  "name": "egg-plugin-ts-demo",
+  "version": "0.0.3",
+  "description": "egg plugin demo by typescript",
+  "eggPlugin": {
+    "name": "tsPluginDemo"
+  },
+  "scripts": {
+    "tsc": "npm run clean && ets -o && tsc -p tsconfig.json",
+    "test": "npm run tsc && egg-bin test",
+    "cov": "npm run tsc && egg-bin cov",
+    "ci": "npm run cov",
+    "clean": "del './{app,config,test,typings}/**/*.{js,d.ts}'",
+    "prepublish": "npm run tsc"
+  },
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whxaxes/egg-plugin-ts-demo.git"
+  },
+  "author": "whxaxes <whxaxes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whxaxes/egg-plugin-ts-demo/issues"
+  },
+  "homepage": "https://github.com/whxaxes/egg-plugin-ts-demo#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "del-cli": "^2.0.0",
+    "egg": "^2.22.2",
+    "egg-bin": "^4.13.0",
+    "egg-mock": "^3.23.1",
+    "tslint": "^5.18.0",
+    "tslint-config-egg": "^1.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "app",
+    "config",
+    "typings",
+    "index.d.ts"
+  ]
+}

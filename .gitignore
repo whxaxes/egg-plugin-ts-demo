@@ -1,0 +1,11 @@
+node_modules
+coverage/
+.nyc_output/
+run/
+logs/
+app/**/*.js
+config/**/*.js
+test/**/*.js
+app/**/*.d.ts
+config/**/*.d.ts
+test/**/*.d.ts
